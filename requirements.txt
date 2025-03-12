@@ -1,0 +1,14 @@
+Flask
+opencv-python-headless
+pytesseract
+Werkzeug
+Pillow
+PyMuPDF
+pandas
+XlsxWriter
+pdfquery
+openpyxl
+
+werkzeug
+regex
+pandas
