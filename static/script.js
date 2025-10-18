@@ -1,4 +1,3 @@
-//------------------------------------------------------------------------notas fiscais
 document.addEventListener('DOMContentLoaded', function() {
     // Função para verificar se todos os campos de arquivos têm pelo menos um arquivo e se os tipos são válidos
     function verificarArquivos(event) {
@@ -42,37 +41,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-//------------------------------------------------------------------------empenhos
-const uploadForm = document.getElementById("upload-form");
-
-function handleFiles(files) {
-    for (let file of files) {
-        console.log("File:", file.name);
-    }
-}
-
-uploadForm.addEventListener("dragover", event => {
-    event.preventDefault();
-    uploadForm.classList.add("highlight");
-});
-
-uploadForm.addEventListener("dragleave", () => {
-    uploadForm.classList.remove("highlight");
-});
-
-uploadForm.addEventListener("drop", event => {
-    event.preventDefault();
-    uploadForm.classList.remove("highlight");
-
-    let files = event.dataTransfer.files;
-    handleFiles(files);
-
-    // Atualiza o campo de input com os arquivos soltos
-    let inputElement = document.getElementById("pdf_file");
-    inputElement.files = files;
-});
-
-uploadForm.addEventListener("change", event => {
-    let files = event.target.files;
-    handleFiles(files);
-});
